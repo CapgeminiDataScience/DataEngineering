@@ -19,7 +19,7 @@ pipelines:
           - python ./main.py
     - step:
         name: Deployment (Production Environment)
-        deployment: test
+        deployment: production
         caches:
           - pip
         script:
