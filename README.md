@@ -1,8 +1,6 @@
-# template-project-python
-
 This repository is designed to serve as a generic python template for Capgemini projects.
 
-## Contents
+# Contents
 
 - [Key Files](#key-files)
     - [Requirements](#requirements)
@@ -12,7 +10,7 @@ This repository is designed to serve as a generic python template for Capgemini 
     - [Environment Setup](#environment-setup)
 
 
-## Requirements
+# Requirements
 
 Every project should have a set of requirements. For simple Python projects, all you
 need is a text file with required packages listed line by line.
@@ -22,7 +20,7 @@ Defining a version number will ensure your code remains stable when packages are
 although it will fall to you to update the package versions when necessary.
 
 
-## Settings
+# Settings
 
 The settings file should contain any project specific configuration and variables.
 It is an ideal space to store database connection details and anything that is
@@ -32,7 +30,7 @@ The example file for this project contains a basic logging setup and layout, whi
 be easily adjusted according to your needs.
 
 
-## Setup
+# Setup
 
 This file contains all the metadata for your project. Most importantly, it is used to
 create Python eggs, a single-file importable distribution format. Eggs are Python's
@@ -60,12 +58,12 @@ package (see the Python Subversion sandbox for source code, or the EasyInstall p
 or current installation instructions).
 
 
-## Project Setup
+# Project Setup
 
 Every project you work on should have its own virtual environment to avoid conflicts and
 dependencies from other projects and allow you to easily manage project requirements.
 
-### Environment Setup
+## Environment Setup
 
 There are a number of virtual environment wrappers that serve this purpose; however,
 the recommended wrapper for this project is `virtualenvwrapper` (source documentation
