@@ -8,6 +8,18 @@ image: python:3.6.2
 pipelines:
   default:
     - step:
+        name: Deployment (Test Environment)
+        deployment: test
+        caches:
+          - pip
+        script:
+          - "[ -f /logs ] || mkdir logs && echo 'Logging directory created'"
+          - pip install --upgrade -r requirements.txt
+          - chmod 777 main.py
+          - python ./main.py
+    - step:
+        name: Deployment (Production Environment)
+        deployment: test
         caches:
           - pip
         script:
