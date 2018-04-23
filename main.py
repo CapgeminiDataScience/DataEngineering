@@ -7,4 +7,6 @@ file = open("/tmp/test.txt", "w+")
 file.write("Success")
 file.close()
 
+print("Success")
+
 end_application(start)
