@@ -16,4 +16,3 @@ pipelines:
         script:
           - chmod 777 main.py
           - python ./main.py
-
