@@ -18,5 +18,5 @@ def start_application():
 def end_application(start_time):
     end_time = datetime.now()
     time_elapsed = end_time - start_time
-    log.info(f"Time elapsed: {time_elapsed}")
     log.info("Application ended")
+    log.info(f"Time elapsed: {time_elapsed}")
