@@ -1,7 +1,10 @@
 from setuptools import setup, find_packages
 
 with open("requirements.txt") as file:
-    requirements = file.read().splitlines()
+    main_requirements = file.read().splitlines()
+
+with open("test/requirements.txt") as file:
+    test_requirements = file.read().splitlines()
 
 setup(
 
@@ -13,13 +16,16 @@ setup(
     license = "Commercial",
 
 # Install list of requirements
-    install_requires = requirements,
+    install_requires = main_requirements,
 
 # Include all directories within project with an init.py file
     packages = find_packages(),
 
-# Includes additional files without a .py file ending
-    include_package_data = True
+# Include additional files without a .py file ending, using the relevant package as the key
+    package_data = {"": ["*.md", "*.rst"], "test": ["*.txt"]},
+
+# Specify a test class or package with associated requirements
+    test_suite = "test",
+    test_require = test_requirements
 
 )
-
