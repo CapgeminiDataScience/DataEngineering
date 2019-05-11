@@ -1,3 +1,5 @@
+# Introduction
+
 This repository is designed to serve as a generic python template for Capgemini projects.
 
 # Contents
