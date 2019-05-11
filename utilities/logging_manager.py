@@ -6,7 +6,7 @@ import sys
 import traceback
 from logging.config import fileConfig
 
-PROJECT_DIRECTORY = os.path.abspath(os.path.join(os.path.dirname(__file__), "..")).replace("\\", "/")
+from settings import PROJECT_DIRECTORY
 
 
 def initialise_logging(filepath, name) -> logging.Logger:

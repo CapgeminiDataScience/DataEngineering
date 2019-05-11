@@ -5,7 +5,6 @@ import subprocess
 
 from utilities.logging_manager import initialise_logging
 
-PROJECT_DIRECTORY = os.path.abspath(os.path.join(os.path.dirname(__file__), "..")).replace("\\", "/")
 logger = initialise_logging(__file__, "run.run_manager")
 
 
@@ -14,6 +13,13 @@ class FileOrDirectoryDoesNotExist(Exception):
 
 
 def run_os_command(command):
+
+    """
+    Run given command on local operating system
+
+    :param command:     Command to run
+
+    """
 
     # Execute given command and store results
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
@@ -30,13 +36,24 @@ def run_os_command(command):
 
 def fs_check_exists(command, file_path, error):
 
+    """
+    Execute a given command to check for a file's existence
+
+    :param command:     Command to run
+    :param file_path:   File path to check
+    :param error:       Whether to raise an exception or simply return boolean outcome
+
+    :return outcome:    Whether the file path exists
+
+    """
+
     try:
         # Execute given command and evaluate output
         subprocess.check_output(command, shell=True, stderr=subprocess.PIPE)
         return True
 
-    # Raise specific exception on error if desired, otherwise return false
     except subprocess.CalledProcessError:
+        # Raise specific exception on error if desired, otherwise return false
         if error:
             raise FileOrDirectoryDoesNotExist(f"File or directory does not exist: {file_path}")
         return False
