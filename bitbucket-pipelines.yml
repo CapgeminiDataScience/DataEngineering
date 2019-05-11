@@ -2,6 +2,7 @@
 image: python:3.6.2
 
 pipelines:
+
   default:
     - step:
         name: Deployment (Test Environment)
@@ -13,6 +14,7 @@ pipelines:
           - pip install --upgrade -r requirements.txt
           - chmod 777 main.py
           - python ./main.py
+
   custom:
     production-deployment:
       - step:
