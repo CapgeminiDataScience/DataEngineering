@@ -1,14 +1,34 @@
+
+### Git Ignore
+
+
+## Project Files
+
+# Configuration
+properties/
+# settings.py
+
+# Data
+log/
+data/
+**.csv
+
+## Integrated Development Environment
+
 # PyCharm
 .idea/
-
-# Jupyter Notebook
-.ipynb_checkpoints
 
 # Spyder
 .spyderproject
 .spyproject
 
-# Environments
+# Jupyter Notebook
+.ipynb_checkpoints
+
+
+## Environment
+
+# Virtual Environments
 .env
 .venv
 env/
@@ -17,6 +37,24 @@ ENV/
 env.bak/
 venv.bak/
 .python-version
+
+
+## Testing
+
+# Unit Test / Coverage Reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+
+## Distribution
 
 # Distribution / Packaging
 .Python
@@ -38,37 +76,28 @@ wheels/
 *.egg
 MANIFEST
 
-# Byte-compiled / Optimized / DLL Files
-__pycache__/
-*.py[cod]
-*$py.class
+
+## Installation
 
 # PyInstaller
 *.manifest
 *.spec
 
+# PyBuilder
+target/
+
 # Installer Logs
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit Test / Coverage Reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
 
-# PyBuilder
-target/
+## Other
+
+# Byte-compiled / Optimized / DLL Files
+__pycache__/
+*$py.class
+
 
 # Other
 .iws
 .iml
-.data/
-data_analysis/out/
-data_ingestion/out/
