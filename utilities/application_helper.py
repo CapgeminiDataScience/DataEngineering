@@ -1,9 +1,9 @@
-import logging
 import time
 from datetime import datetime
 
+from utilities.logging_manager import initialise_logging
 
-log = logging.getLogger(__name__)
+log = initialise_logging(__file__, __name__)
 
 
 # Record application start
